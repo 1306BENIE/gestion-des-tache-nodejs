@@ -1,0 +1,24 @@
+{
+  "name": "gestion-des-taches_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/1306BENIE/gestion-des-tache-nodejs#readme",
+  "bugs": {
+    "url": "https://github.com/1306BENIE/gestion-des-tache-nodejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1306BENIE/gestion-des-tache-nodejs.git"
+  },
+  "license": "ISC",
+  "author": "BENIE SYLVESTRE",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
