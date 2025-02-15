@@ -214,7 +214,9 @@ server.listen(3000, () => {
   console.log("Serveur démarré sur http://localhost:3000");
 })
 
-
+// exercice 
+// 400 dire au navigateur quand il y a une erreur
+// 200 quand c'est une erreur
 
 
 
