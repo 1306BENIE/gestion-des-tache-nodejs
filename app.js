@@ -140,18 +140,17 @@
 // showMenu();
 
 // un restaurent organise une soirée spéciale et annonce une promotion à ses clients
-// 
+//
 
-const EventEmitter = require('events');
+const EventEmitter = require("events");
 
 const instanceEvent = new EventEmitter();
-
 
 // instanceEvent.on('open', (msg) => {
 //   console.log("Le restaurant organise une soirée spéciale :", msg);
 // });
 
-// instanceEvent.emit('open', "PAF");                          
+// instanceEvent.emit('open', "PAF");
 
 // dans un restaurent, quand un client commande:
 // le serveur prend la commande
@@ -178,7 +177,6 @@ const instanceEvent = new EventEmitter();
 // cette fonction s'attend à recevoir un parametre leplat
 // mettez en evidence les etat de livraison du plat avec les promises
 
-
 // const commanderplat = (plat) => {
 //   return new Promise((result, reject) => {
 //     if (plat === "viande") {
@@ -200,28 +198,22 @@ const instanceEvent = new EventEmitter();
 
 // verifieCommande("viande");
 
-
-
 const HTTP = require("http");
 
 const server = HTTP.createServer((req, res) => {
-  res.writeHead(200, {"content-type" : "text/plain"});
-  res.end("Bievenue sur mon serveur node");
-
-})
+  if (req.url === "/") {
+    res.writeHead(200, { "content-type": "text/plain" });
+    res.end("Bievenue sur mon serveur node");
+  } else {
+    res.writeHead(400, { "content-type": "text/plain" });
+    res.end("Requete invalide");
+  }
+});
 
 server.listen(3000, () => {
   console.log("Serveur démarré sur http://localhost:3000");
-})
+});
 
-// exercice 
+// exercice
 // 400 dire au navigateur quand il y a une erreur
 // 200 quand c'est une erreur
-
-
-
-
-
-
-
-
